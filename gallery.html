@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;}
+
+* {box-sizing: border-box;}
+
+.bg-img {
+  /* The image used */
+  background-image: url("figs/Tony_nature_header_narrow.jpg");
+  
+  Width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  position: relative;
+  margin-top: 0;
+  margin-left: 18px;
+  width: auto;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 22px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #306754;
+  color: #f2f2f2;
+}
+
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  background-color: #ddd;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: relative;
+  top: 0;
+  text-align: center;
+}
+
+/* Container for image text */
+.caption-container {
+  top: 0;
+  text-align: center;
+  background-color: #D0D0D0;
+  padding: 2px 16px;
+  color: black;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+</style>
+<body>
+
+<div class="bg-img">
+  <div class="container">
+    <div class="topnav">
+      <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="projects.html"><i class="fa fa-fw fa-wrench"></i> STEM Projects</a>
+      <a href="#/" class="active"><i class="fa fa-fw fa-puzzle-piece"></i> Art Gallery</a>
+      <a href="photos.html"><i class="fa fa-fw fa-camera-retro"></i> Photos</a>
+      <a href="Anthony-Resume-1.pdf"><i class="fa fa-fw fa-file-text"></i> CV</a>
+    </div>
+  </div>
+</div>
+
+<h1 style="text-align:center; color:teal; font-size:250%; font-family:Georgia;">Now, you are at my Art Gallery</h1>
+
+
+<div id="slideshow1" class="slideshow-container">
+
+<h3> &bull; Art and Books for Promoting Culture Awareness </h3>
+<p style="width:98%"> As one of my major volunteer services (with a President's Volunteer Service Award), I created a number of drawings to illustrate in books “One 
+Hundred Years of Chinese Immigration History in North America” ISBN13: 978-1458335746, and “History of 
+Chinese Laborer Ancestors in the Transcontinental Railroad” ISBN13: 978-1304600400. These books were published by a 
+non-profit organization - North American Maple Culture Center - to improve cultural 
+awareness of Chinese-American history. These books are being exhibited and collected by a large number of public libraries
+and have been suggested to serve textbooks for teaching the history of Chinese immigration. Here are some 
+examples of my drawings in a slideshow.</p>
+<br>
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 6</div>
+  <img src="Pictures/Tony_railroad_4.jpeg" style="width:100%">
+  <div class="caption-container"> <p> <b>Toughness in Building the Transcontinental Railroad (1863-1869):</b> The west line of the railroad is about 130 miles long in California. Even though it accounts for only 1/5 of the total length of the railroad, this part of the line was the toughest to build because of the number of miles in the mountain ranges, along with the year-long snow.</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+  <center><img src="Pictures/Tony_railroad_3.jpeg" style="width:57%"></center>
+    <div class="caption-container"> <p> <b> Hammer and Steel Drill:</b> When building the Pacific Railroad (1863-1869), Chinese workers tied a rope around their waists and hung in the air, while using hammers and steel chisels to carve out small passage on the mountains. They then slowly expanded the passage to be a road for wagons to pass.</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 6</div>
+  <center><img src="Pictures/Tony_railroad_1_trackpeople.jpeg" style="width:60%"></center>
+  <div class="caption-container"> <p> <b> Building Snow Shelter:</b> In order to mitigate the impact of the avalanche, Chinese workers used their experiences and skills in farming to design and build giant anti-snow work tents while digging tunnels. These tents covered and protected the railway and its foundation.</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 6</div>
+  <center><img src="Pictures/Tony_railroad_2_track.jpeg" style="width:78%"></center>
+  <div class="caption-container"> <p> <b>Wooden Snowproof Wall:</b> When building the Pacific Railroad (1863-1869), Chinese workers constructed wooden walls for 60 kilometers along the railroad where avalanches often took place so they protected the road from snow fall.</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 6</div>
+  <center><img src="Pictures/Tony_Chinese_exclusion_3.jpeg" style="width:70%"></center>
+  <div class="caption-container"> <p> <b>Where is the Equality?</b> In 1892, the Chinese Exclusion Act was extended for 10 years. In 1904, the US Congress passed a motion to extend the Chinese Exclusion Act indefinitely. The Chinese workers who contributed to the construction of the Pacific Railways had nowhere to go.</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 6</div>
+  <center><img src="Pictures/Tony-Chinatown.jpg"  style="width:100%"></center>
+  <div class="caption-container"> <p> <b>Boston Chinatown: </b>In 1870, Chinese workers poured into Massachusetts. To replace the workers who were on strike, 75 Chinese in their 20s were hired by a shoe factory in North Adams, Massachusetts. They settled in Ping on Alley, which gradually formed Boston's Chinatown. This area covered an area of five acres, with three main streets, nearly 100 shops. Nearly half of the population was Asian.</p></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1,slideshow1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1, slideshow1)">&#10095;</a>
+
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1, slideshow1)"></span> 
+  <span class="dot" onclick="currentSlide(2, slideshow1)"></span> 
+  <span class="dot" onclick="currentSlide(3, slideshow1)"></span> 
+  <span class="dot" onclick="currentSlide(4, slideshow1)"></span> 
+  <span class="dot" onclick="currentSlide(5, slideshow1)"></span> 
+  <span class="dot" onclick="currentSlide(6, slideshow1)"></span> 
+</div>
+
+<p style="width:98%"> For more information about these books, please check the website from <a href= "https://www.mapleus.org/chinese-american-history"> North American Maple Culture Center</a>. The books can be purchased from <a href="https://www.amazon.com/dp/1458335747 "> Amazon</a>. </p>
+<br>
+
+<p style="width:98%"> <b>Book Translation:</b> I have helped translate a Chinese novel written by Xi Zhang that tells a story of a three generation Chinese American family. The story starts from a Chinese man who went to San Francisco by himself when he was young. He was imprisoned three times, had four wives in different life periods, became a hero five times, and won court cases six times. He had eight sons and more than 40 grandchildren. He settled down in North America and lived for 100 years old (1845-1945) before he passed away peacefully surrounded by his extended family members. This novel pictures a century of the U.S. Immigration. I have recorded my English translation in one of eight story videos (the 7th episode).  </p>
+<p> Together with a team, we created an audio book and my portion has been uploaded to <a href = "https://www.youtube.com/watch?v=EdoSIL4kSbo"> YouTube</a>.</p>
+
+</div>
+<br>
+
+<div id="video" class="slideshow-container">
+<p stype="width:98%"> Here is a short footage provided by Xi Zhang when the book ISBN13: 978-1304600400 was exhibited in one of the train stations along the Transcontinental Railroad. </p>
+
+<center><video style="width:35%" controls>
+  <source src="Pictures/exhibit_footage_2021.mp4" type="video/mp4">
+</video></center>
+</div>
+<br>
+<br>
+
+
+<div id="slideshow2" class="slideshow-container">
+
+<h3> &bull; Illustration for E. O. Smith Magazine - Virtu </h3>
+<p style="width:98%"> I am one of the illustrators for our school magazine, and have created a variety of drawings and paintings for the magazine over the years, including nature scenes, drawings of different animals, human portrait drawings, etc. Below are some examples.  </p>
+<br>
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 13</div>
+  <center><img src="Pictures/Tony_Leopard.jpeg" style="width:100%"></center>
+  <div class="caption-container"> <p> A leopard </p> </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 13</div>
+  <center><img src="Pictures/Tony_nature_sceen_1.jpeg" style="width:60%"></center>
+  <div class="caption-container"> <p> A view of a farm from distance </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 13</div>
+  <center><img src="Pictures/Tony_Luke.jpeg" style="width:60%"></center>
+  <div class="caption-container"> <p> Luke Skywalker</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 13</div>
+  <center><img src="Pictures/Tony_Starwar_darklord.jpeg"  style="width:100%"></center>
+  <div class="caption-container"> <p> The dark lord in Star Wars. </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 13</div>
+  <center><img src="Pictures/Tony_oneBird.jpeg" style="width:60%"></center>
+  <div class="caption-container"> <p> A bird</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 13</div>
+  <center><img src="Pictures/Tony_Dog.jpg"  style="width:60%"></center>
+  <div class="caption-container"> <p> A dog</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">7 / 13</div>
+  <center><img src="Pictures/Tony_TwoBirds_orig.jpeg"  style="width:60%"></center>
+  <div class="caption-container"> <p> Two birds </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">8 / 13</div>
+  <center><img src="Pictures/Tony_Roger_Sherman.jpeg" style="width:58%"></center>
+  <div class="caption-container"> <p> Portrait of Roger Sherman for a History Day event</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">9 / 13</div>
+  <center><img src="Pictures/Tony_cartoon_ninja.jpeg" style="width:62%"></center>
+  <div class="caption-container"> <p> Ninja from Japanese anime </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">10 / 13</div>
+  <center><img src="Pictures/Tony_eye.jpeg" style="width:100%"></center>
+  <div class="caption-container"> <p> Eye </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">11 / 13</div>
+  <center><img src="Pictures/Tony_AfricanGirl.JPG" style="width:60%"></center>
+  <div class="caption-container"> <p> An African girl </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">12 / 13</div>
+  <center><img src="Pictures/Tony_artdesign.JPG" style="width:56%"></center>
+  <div class="caption-container"> <p> An art design </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">13 / 13</div>
+  <center><img src="Pictures/Tony_panda.JPG" style="width:90%"></center>
+  <div class="caption-container"> <p> Panda on canvas </p></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1,slideshow2)">&#10094;</a>
+<a class="next" onclick="plusSlides(1, slideshow2)">&#10095;</a>
+
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1, slideshow2)"></span> 
+  <span class="dot" onclick="currentSlide(2, slideshow2)"></span> 
+  <span class="dot" onclick="currentSlide(3, slideshow2)"></span> 
+  <span class="dot" onclick="currentSlide(4, slideshow2)"></span> 
+  <span class="dot" onclick="currentSlide(5, slideshow2)"></span> 
+  <span class="dot" onclick="currentSlide(6, slideshow2)"></span> 
+  <span class="dot" onclick="currentSlide(7, slideshow2)"></span> 
+  <span class="dot" onclick="currentSlide(8, slideshow2)"></span> 
+  <span class="dot" onclick="currentSlide(9, slideshow2)"></span> 
+  <span class="dot" onclick="currentSlide(10, slideshow2)"></span> 
+  <span class="dot" onclick="currentSlide(11, slideshow2)"></span> 
+  <span class="dot" onclick="currentSlide(12, slideshow2)"></span> 
+  <span class="dot" onclick="currentSlide(13, slideshow2)"></span> 
+</div>
+
+
+</div>
+<br>
+<br>
+
+
+
+<div id="slideshow3" class="slideshow-container">
+
+<h3> &bull; Holiday Card Design </h3>
+<p style="width:98%"> I designed a variety of holiday cards for my friends and family members. I hope that these cards add a tone to the different holidays. For instance, help my friends to say "thank you" to their parents, or celebrate the Chinese lunar year.</p>
+<br>
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 9</div>
+  <center><img src="Pictures/Tony_cards.jpeg" style="width:55%"></center>
+  <div class="caption-container"> <p>Holiday cards </p> </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 9</div>
+  <center><img src="Pictures/Tony_fathers_day.jpeg" style="width:100%"></center>
+  <div class="caption-container"> <p> I remember that when I was little, my father took me to various places for swimming meets and training. Here is a card that I drew when I was in middle school to memorize those treasured father-son moments.</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 9</div>
+  <center><img src="Pictures/Tony_mothersday.JPG" style="width:78%"></center>
+  <div class="caption-container"> <p> This is a mothers day gift that is a mix of Charlie Brown and Dragon B Zall (an anime), two tv shows I really liked. My mom's meals are the most delicious and always give me a nostalgic sense of home. Look, I am satisfactorily resting there after a delicious dinner.</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 9</div>
+  <center><img src="Pictures/Tony_thanksgiving.JPG" style="width:100%"></center>
+  <div class="caption-container"> <p> Here is a Thanksgiving card with traditional Charlie Brown theme.</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 9</div>
+  <center><img src="Pictures/Tony_holloween.jpeg" style="width:90%"></center>
+  <div class="caption-container"> <p> I seldom draw Halloween card, but here is one. Halloween does not need to be always scary. </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 9</div>
+  <center><img src="Pictures/Tony_Lunar_year_celebration.jpeg"  style="width:60%"></center>
+  <div class="caption-container"> <p> I was hoping to design a stamp for celebrating the Lunar Year when I was in middle school. Maybe one day this can be improved and become a postage stamp.</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">7 / 9</div>
+  <center><img src="Pictures/Tony_fathersday.JPG"  style="width:53%"></center>
+  <div class="caption-container"> <p> I designed a card for a friend. This is quite a different style from my other Happy Fathers Day cards. </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">8 / 9</div>
+  <center><img src="Pictures/Tony_mothers_day.jpeg"  style="width:53%"></center>
+  <div class="caption-container"> <p> Here is a Happy Mother's Day card for a friend. </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">9 / 9</div>
+  <center><img src="Pictures/Tony_CheeseCake_dark.jpeg"  style="width:90%"></center>
+  <div class="caption-container"> <p> Here is a card for my little sister who likes cheesecake so much. </p></div>
+</div>
+
+
+<a class="prev" onclick="plusSlides(-1,slideshow3)">&#10094;</a>
+<a class="next" onclick="plusSlides(1, slideshow3)">&#10095;</a>
+
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1, slideshow3)"></span> 
+  <span class="dot" onclick="currentSlide(2, slideshow3)"></span> 
+  <span class="dot" onclick="currentSlide(3, slideshow3)"></span> 
+  <span class="dot" onclick="currentSlide(4, slideshow3)"></span> 
+  <span class="dot" onclick="currentSlide(5, slideshow3)"></span> 
+  <span class="dot" onclick="currentSlide(6, slideshow3)"></span> 
+  <span class="dot" onclick="currentSlide(7, slideshow3)"></span> 
+  <span class="dot" onclick="currentSlide(8, slideshow3)"></span> 
+  <span class="dot" onclick="currentSlide(9, slideshow3)"></span> 
+</div>
+
+
+</div>
+<br>
+<br>
+
+
+<div id="slideshow4" class="slideshow-container">
+
+<h3> &bull; An Art Exhibition during my Elementary School </h3>
+<p style="width:98%"> When I was in the 4th grade, we held an art exhibition in Mansfield Public Library, CT. Back then, my drawings were in a more direct way of storytelling :-). </p>
+<br>
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 10</div>
+  <center><img src="Pictures/Tony_E_tadpole.JPG" style="width:90%"></center>
+  <div class="caption-container"> <p> This drawing has me staring at tadpoles. Fact is that I did try to raise tadpoles in our fish tank. </p> </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 10</div>
+  <center><img src="Pictures/Tony_E_music.JPG" style="width:90%"></center>
+  <div class="caption-container"> <p> What music can do to you?</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 10</div>
+  <center><img src="Pictures/Tony_E_basketball.JPG" style="width:90%"></center>
+  <div class="caption-container"> <p> Go! go, shoot!</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 10</div>
+  <center><img src="Pictures/Tony_E_flowers.JPG" style="width:90%"></center>
+  <div class="caption-container"> <p> Flowers and ants.</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 10</div>
+  <center><img src="Pictures/Tony_E_violin.JPG" style="width:90%"></center>
+  <div class="caption-container"> <p> Play violin </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 10</div>
+  <center><img src="Pictures/Tony_E_Crab.JPG"  style="width:90%"></center>
+  <div class="caption-container"> <p> Crabs walking ...</p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">7 / 10</div>
+  <center><img src="Pictures/Tony_E_worm.JPG"  style="width:90%"></center>
+  <div class="caption-container"> <p> Worms </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">8 / 10</div>
+  <center><img src="Pictures/Tony_E_ninja.jpeg"  style="width:56%"></center>
+  <div class="caption-container"> <p> Ninjas appeared to be more powerful in my dreams when I was little than what I perceived later in Japanese anime. </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">9 / 10</div>
+  <center><img src="Pictures/Tony_E_watermelon.JPG"  style="width:56.5%"></center>
+  <div class="caption-container"> <p> Too hot! Let us have a piece of watermelon. </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">10 / 10</div>
+  <center><img src="Pictures/Tony_E_panda.JPG"  style="width:56.5%"></center>
+  <div class="caption-container"> <p> Panda can run fast. </p></div>
+</div>
+
+
+<a class="prev" onclick="plusSlides(-1,slideshow4)">&#10094;</a>
+<a class="next" onclick="plusSlides(1, slideshow4)">&#10095;</a>
+
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1, slideshow4)"></span> 
+  <span class="dot" onclick="currentSlide(2, slideshow4)"></span> 
+  <span class="dot" onclick="currentSlide(3, slideshow4)"></span> 
+  <span class="dot" onclick="currentSlide(4, slideshow4)"></span> 
+  <span class="dot" onclick="currentSlide(5, slideshow4)"></span> 
+  <span class="dot" onclick="currentSlide(6, slideshow4)"></span> 
+  <span class="dot" onclick="currentSlide(7, slideshow4)"></span> 
+  <span class="dot" onclick="currentSlide(8, slideshow4)"></span> 
+  <span class="dot" onclick="currentSlide(9, slideshow4)"></span> 
+  <span class="dot" onclick="currentSlide(10, slideshow4)"></span> 
+</div>
+
+
+</div>
+<br>
+<br>
+
+<small>Updated @08/2022</small>
+
+<script>
+var slideshow1 = document.getElementById("slideshow1");
+slideshow1.currentSlideIndex = 1;
+showSlides(slideshow1.currentSlideIndex, slideshow1);
+
+var slideshow2 = document.getElementById("slideshow2");
+slideshow2.currentSlideIndex = 1;
+showSlides(slideshow2.currentSlideIndex, slideshow2);
+
+var slideshow3 = document.getElementById("slideshow3");
+slideshow3.currentSlideIndex = 1;
+showSlides(slideshow3.currentSlideIndex, slideshow3);
+
+var slideshow4 = document.getElementById("slideshow4");
+slideshow4.currentSlideIndex = 1;
+showSlides(slideshow4.currentSlideIndex, slideshow4);
+
+function plusSlides(n, slideshow) {
+  showSlides(slideshow.currentSlideIndex += n, slideshow);
+}
+
+function currentSlide(n, slideshow) {
+  showSlides(slideshow.currentSlideIndex = n, slideshow);
+}
+
+function showSlides(n, slideshow) {
+  var i;
+  var slides = slideshow.getElementsByClassName("mySlides");
+  var dots = slideshow.getElementsByClassName("dot");
+  if (n > slides.length) {slideshow.currentSlideIndex = 1}    
+  if (n < 1) {slideshow.currentSlideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideshow.currentSlideIndex-1].style.display = "block";  
+  dots[slideshow.currentSlideIndex-1].className += " active";
+}
+
+</script>
+
+</body>
+</html> 
