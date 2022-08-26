@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;}
+
+* {box-sizing: border-box;}
+
+.bg-img {
+  /* The image used */
+  background-image: url("figs/Tony_nature_header_narrow.jpg");
+  
+  Width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  position: relative;
+  margin-top: 0;
+  margin-left: 18px;
+  width: auto;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 22px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #306754;
+  color: #f2f2f2;
+}
+
+.myVideo {display:none}
+
+/* Video container */
+.video-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Container for image text */
+.caption-container {
+  top: 0;
+  text-align: center;
+  background-color: #D0D0D0;
+  padding: 2px 16px;
+  color: black;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+</style>
+<body>
+
+<div class="bg-img">
+  <div class="container">
+    <div class="topnav">
+      <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="#/" class="active"><i class="fa fa-fw fa-wrench"></i> STEM Projects</a>
+      <a href="gallery.html"><i class="fa fa-fw fa-puzzle-piece"></i> Art Gallery</a>
+      <a href="photos.html"><i class="fa fa-fw fa-camera-retro"></i> Photos</a>
+      <a href="Anthony-Resume-1.pdf"><i class="fa fa-fw fa-file-text"></i> CV</a>
+    </div>
+  </div>
+</div>
+
+<h1 style="text-align:center; color:teal; font-size:250%; font-family:Georgia;">Fun STEM Projects</h1>
+<br>
+
+<center>
+<table border="0" width="1000px">
+  <tr >
+  <td width="60%">
+    <a href="#project1"> <b> &#9734 Self-driving Prototype Cars </b></a>  
+  </td>
+  <td width="40%" style="text-align:right">
+    June 2021 - present 
+  </td>
+  </tr>
+  <tr >
+  <td width="60%">
+    <a href = "#project2"> <b> &#9734 Understanding Microbiome and Psychiatric Disorder </b></a>  
+  </td>
+  <td width="40%" style="text-align:right">
+    November 2021 - present 
+  </td>
+  </tr>
+  <tr >
+  <td width="60%">
+    <a href = "#project3"> <b> &#9734 CERN's Beamline for Schools </b></a>  
+  </td>
+  <td width="40%" style="text-align:right">
+    September 2018 - April 2022 
+  </td>
+  </tr>
+</table>
+</center>
+
+<br>
+<hr>
+
+<div id="project1" class="video-container">
+
+<h3> &bull; Self-driving Prototype Cars and Energy-efficient Design </h3>
+<p style="width:98%"> I have led a group of peers and started this project since the summer of 2021.  We have been continuously working on it using 2-3 hours per week during academic year and 10-20 hours per week during summer. There are a lot of challenges in this project but also a lot of fun in solving them. Let's first see some result of this project (see the video I made below) and I'll tell you a bit what we have done so far.  </p>
+<br>
+
+<center><video style="width:100%" controls>
+  <source src="Projects/car_running.mp4" type="video/mp4">
+ </video></center>
+ <div class="caption-container"> <p> After working on the project for 11 months, we got a model car running on our testbed track. </p></div>
+
+<br>
+
+<p style="width:98%"> (1) <b>Hardware Assembly</b> The F1Tenth car is an inexpensive test bed for validating autonomous driving algorithms. The car was constructed using a racing car chassis, a motor (Traxxas 4*4 Platinum Brushless Motor), and sensors including LiDAR (Hokuyo) and camera (NexiGo 1080P Webcam), which are linked together to an NVIDIA Jetson TX2 low power module. Our design uses the TX2 because it is suitable for small car chassis and has a GPU that allows for the deployment of deep learning based object and lane detection. A VESC 6 MkV Module controls the motors and steers the wheels, and a customized power board is connected to a lithium ion battery to power the car. To account for the multiple required connections among pieces, a USB hub is installed to also allow for human interaction with the car. 
+We hope that this design achieves both low power and fast processing. See this image for the main parts and a brief clip I made. </p>
+
+<center><img src="Projects/Parts.jpeg" style="width:90%"></center>
+  <div class="caption-container"> <p> Here is the picture of some of the main parts in our model car.</p></div>
+<br>
+
+<center><video style="width:100%" controls>
+  <source src="Projects/Creating_model_cars.mp4" type="video/mp4">
+ </video></center>
+ <div class="caption-container"> <p> There are many pieces that we need to put together. It took us about three months to create the first prototype car. The second one was much faster. </p></div>
+
+<br>
+
+<p style="width:98%"> (2) <b>Software Installation and Debugging</b> While the car assembly is completed, it does not necessarily make the car run.  What makes the car run or makes the car intelligent is all those computer algorithms we need to install and test on Jetson TX2. For instance, the Robot Operating System (ROS) enables the car to make decisions based upon data from the Hokuyo LiDAR and a visual camera. We need to install NVIDIA SDK (software development kit) Manager to a desktop that can be used to flash the TX2. After booting up the TX2, linux and ROS can be installed on it. ROS uses topics and nodes to link robotic components together through processes called publishing and subscribing. After installing the ROS and other pieces of software, the model cars can run along the testbed tracks that we constructed. The LiDAR system can sense and detect the obstacles for the car to avoid collision.</p>
+
+<center><video style="width:100%" controls>
+  <source src="Projects/Installing_software.mp4" type="video/mp4">
+ </video></center>
+ <div class="caption-container"> <p> It requires troubleshooting and debugging when installing the necessary software and algorithms. </p></div>
+
+<br>
+
+<p style="width:98%"> (3) <b>Computer Vision</b> To give the car more intelligence, we would like the car to detect objects and lanes from its camera footage, which requires computer vision techniques. Particularly, lane detection is fundamental because lane markings are the main static component on the road that instruct the vehicles to safely drive on the road. Deep learning methods have been the new standards for lane detection, either based on semantic segmentation, or convolutional neural networks. Deep learning models are typically large, and require expensive computing power such as GPU to deploy. For a small chip like TX2, we will need efficient and portable deep learning models. We have been examining the Ultra-fast-lane-detection algorithm package that uses a ResNet-18 as a backbone in the model, and we have attempted to compress the model to calculate less model parameters for better energy efficiency. Here is the lane detection clip where we put side-by-side the car running video and the camera footage of that car while running where the Ultra-fast-lane-detection model labeled the lane markings. This model has been pretty accurate when detecting lanes from recorded videos, but for a streamlined footage like in our situation, more work may be needed to improve detection accuracy. </p>
+
+<center><video style="width:100%" controls>
+  <source src="Projects/Fast_lane_detection.mp4" type="video/mp4">
+ </video></center>
+ <div class="caption-container"> <p> On the left side, it is the video we recorded when the car ran on a short track; on the right side, it shows the footage that the car camera took when the car ran and was marked by the lane detection algorithm. </p></div>
+
+<br>
+
+<p style="width:98%"> (4) <b>Conference Presentation</b> Our work has been selected by an ACM/IEEE Conference (<a href="https://www.islped.org/2022/">ACM/IEEE International Symposium on Low Power Electronics and Design</a>) for Design Contest, and I demonstrated our prototype car and lane detection among other teams of graduate students and scientists. Here is our <a href="Projects/ISLPED2022_Design_Contest.pdf"> submitted abstract</a>, and here is the <a href="Projects/IEEE_Symposium.pdf">poster</a> I presented at Boston in August 2022. </p>
+
+<center><video style="width:100%" controls>
+  <source src="Projects/ISLPED-v1.mp4" type="video/mp4">
+ </video></center>
+ <div class="caption-container"> <p> A clip showing me present at the conference with a poster and also a demonstration on the floor. </p></div>
+
+
+</div>
+<br>
+<br>
+<br>
+
+
+<div id="project2" class="video-container">
+
+<h3> &bull; Data Analysis of Microbiome and Disease </h3>
+<p style="width:98%"> I was selected by <a href="https://www.jax.org/about-us/our-campuses-and-communities/connecticut"> the Jackson Laboratory for Genomic Medicine (Farmington, CT)</a> to become their Academic Year Research Fellow in 2021-2022 based on a competitive selection process. I chose to work in the lab of <a href="https://en.wikipedia.org/wiki/George_Weinstock">Dr. George Weinstock</a> in a hybrid mode (in-person and virtual due to the pandemic). </p>
+
+<p style="width:98%"> Dr. Weinstock is a geneticist, microbiologist, and Evnin Family Chair and Director of Microbial Genomics at the Jackson Laboratory. He has led many impactful projects, such as the Human Microbiome Project and Human Genome Project in the US. </p>
+
+<p style="width:98%"> Under guidance from lab members of Dr. Weinstock, such as Dong-Binh Tran, I first self-studied a book <a href="https://www.amazon.com/gp/product/3319714031/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1">Numerical Ecology with R</a>, and then analyzed mouse microbiome datasets to understand the relationship between gut microbiome and cocaine use behaviors.</p>
+
+<p style="width:98%"> Although the gut and brain are separate organs, they communicate with each other via trillions of intestinal bacteria that collectively make up the gut microbiome. The gut-brain axis (GBA) is the bidirectional communication between the central nervous system (the brain and spinal cord) and the virus and bacteria within your gut as well as the enteric nervous system. </p>
+
+<p style="width:98%"> For me, it is interesting to learn that gut microbes play critical roles in regulating brain function and mood. The gut microbiome influences neural circuits – stress, reward, and motivation. </p>
+
+<p style="width:98%">Substance use disorders and addiction are major public health problems in the US and worldwide. People have studied the etiology of substance use disorders and have focused on the neurobiology of reward processing, cognitive control, and emotion regulation. Because the gut microbiome affects the same circuits, it suggests significant gut-brain interactions in substance use disorders. </p>
+
+<p style="width:98%"> Although much work has been done to understand the neuronal signaling networks in the central nervous system, gut microbiome is a relatively unexplored source of biomarkers for substance use etiology. The relationship between gut health and substance use and disorder has only begun to be characterized but promising evidence has emerged. </p>
+
+<p style="width:98%"> I obtained data on sequenced DNA fragments of the bacteria in the guts of 341 mice, which produced counts of the copies of bacteria in specific genera. In total, there were 96 different genera, so each mouse was characterized by 96 features. These mice were also assessed with behavioral variables, including 9 cocaine self-administration behaviors using catheters. I analyzed this set of data to understand how microbiome is related to cocaine use disorder. I first used cluster analysis to group the mice into 3 groups according to their 9 behavioral features to form cocaine use index such as heavy users, or light users. Because microbiome data is high-dimensional, dimension reduction techniques are important in the analysis to better examine the essential dimension of the data. Using both the linear dimension reduction (e.g., Principal Component Analysis) and nonlinear dimension reduction (e.g., UMAP) methods, I reduced the microbiome features into 2-3 coordinates, and used these projected coordinates to predict cocaine use index. These steps helped me understand the associations between microbiome and cocaine use, and produced interesting results.  My study has been summarized into this <a href="/Projects/ijhsr_anthony.pdf">manuscript</a>. </p>
+<br>
+
+</div>
+<br>
+
+<div id="project3" class="video-container">
+
+<h3> &bull; CERN's International Competition - Beamline for Schools </h3>
+<p style="width:98%"> Scientific research requires continuity and persistent commitment. The Beamline for Schools (BL4S) competitions are another example of my research persistency. <a href="https://home.cern/"CERN</a> CERN </a> (Conseil Européen pour la Recherche Nucléaire, or the European Organization for Nuclear Research, in Geneva, Switzerland), is home to the world's largest particle accelerator. CERN holds an international physics competition (<a href="https://beamlineforschools.cern/">here is the link for BL4S</a>) every year for high school students from all around the world. High school students propose a scientific experiment that they want to perform at a particle accelerator. The two teams that prepare the best proposals will win a trip to a particle accelerator facility to perform their experiments at a fully-equipped beam line. There are additional prizes for a shortlist of teams and special mention. </p>
+
+<p style="width:98%">I have started the BL4S research since the 9th grade, and continuously competed for three years. Together with my friends from three different high schools, we formed teams of peers with common interests in physics and general STEM. </p>
+
+<p style="width:98%">(1) <b>2019-2020:</b> I worked on a quantum physics topic related to bremsstrahlung radiation together with five other students who were one grade above me. I played important roles in the teamwork. Particularly, I communicated several ideas to the team after reading literature and contributed in programming the related algorithms.  </p>
+
+<p style="width:98%">Our proposed experiment has been written into a <a href="Projects/BL4S-2020.pdf">PDF file</a>. Our team named as "The Quantum-Plators" was one of the special mentioned teams in 2020. </p>
+
+<iframe src="https://beamlineforschools.cern/sites/default/files/BL4S_shortlisted_teams_2020.pdf" width="100%" height="600"></iframe>
+
+<br>
+<p style="width:98%">(2) <b>2020-2021:</b> We (two 11th graders, two 10th graders, and one 9th grader) investigated uniquely quantum signatures in semi-classical processes. We made an effort to obtain preliminary results via simulation using python and graphing algorithms. I played a major role in creating the simulation with python programming. </p>
+
+<p style="width:98%">This time we ended up as one of the shortlisted teams (listed as "Quantumplaters"), a step above the special mentions. Although we were not the top winners, I personally believe that this continuity in research is a major growing factor for all of us to explore more and deeper into the topic and improve our research capability. The proposed experiment has been described in this <a href="Projects/BL4S-2021.pdf">PDF file</a>. </p>
+
+<iframe src="https://beamlineforschools.cern/sites/default/files/BL4S_results_2021.pdf" width="100%" height="600"></iframe>
+
+<br>
+<p style="width:98%">(3) <b>2021-2022:</b> We (the same team as in 2020-2021, and now two 12th graders, two 11th graders, and one 10th grader) proposed another experiment to measure the total number of up and anti-down bar quarks in a sulfur nucleus. Based on our literature review, although scientists have confirmed with great certainty the number of quarks in a nucleus, no study has been published to measure the number of quarks at the muon mass scale. </p>
+
+<p style="width:98%">This is a much more well-thought experiment and has been described in this <a href="Projects/BL4S-2022.pdf">PDF file</a>. Although this experiment was still not selected to be the top two, we have learned a lot from the research and we are fascinated that at different resolutions, different numbers of particles can be observed. In order to understand a physical concept, we need to examine it from so many different perspectives.  </p>
+
+
+<br>
+
+
+
+</div>
+<br>
+
+
+</body>
+</html>
