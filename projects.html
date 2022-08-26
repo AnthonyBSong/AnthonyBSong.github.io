@@ -169,7 +169,7 @@ body {
 <br>
 
 <center><video style="width:100%" controls>
-  <source src="Projects/car_running.mp4" type="video/mp4">
+  <source src="/Projects/car_running.mp4" type="video/mp4">
  </video></center>
  <div class="caption-container"> <p> After working on the project for 11 months, we got a model car running on our testbed track. </p></div>
 
@@ -178,12 +178,12 @@ body {
 <p style="width:98%"> (1) <b>Hardware Assembly</b> The F1Tenth car is an inexpensive test bed for validating autonomous driving algorithms. The car was constructed using a racing car chassis, a motor (Traxxas 4*4 Platinum Brushless Motor), and sensors including LiDAR (Hokuyo) and camera (NexiGo 1080P Webcam), which are linked together to an NVIDIA Jetson TX2 low power module. Our design uses the TX2 because it is suitable for small car chassis and has a GPU that allows for the deployment of deep learning based object and lane detection. A VESC 6 MkV Module controls the motors and steers the wheels, and a customized power board is connected to a lithium ion battery to power the car. To account for the multiple required connections among pieces, a USB hub is installed to also allow for human interaction with the car. 
 We hope that this design achieves both low power and fast processing. See this image for the main parts and a brief clip I made. </p>
 
-<center><img src="Projects/Parts.jpeg" style="width:90%"></center>
+<center><img src="/Projects/Parts.jpeg" style="width:90%"></center>
   <div class="caption-container"> <p> Here is the picture of some of the main parts in our model car.</p></div>
 <br>
 
 <center><video style="width:100%" controls>
-  <source src="Projects/Creating_model_cars.mp4" type="video/mp4">
+  <source src="/Projects/Creating_model_cars.mp4" type="video/mp4">
  </video></center>
  <div class="caption-container"> <p> There are many pieces that we need to put together. It took us about three months to create the first prototype car. The second one was much faster. </p></div>
 
@@ -192,7 +192,7 @@ We hope that this design achieves both low power and fast processing. See this i
 <p style="width:98%"> (2) <b>Software Installation and Debugging</b> While the car assembly is completed, it does not necessarily make the car run.  What makes the car run or makes the car intelligent is all those computer algorithms we need to install and test on Jetson TX2. For instance, the Robot Operating System (ROS) enables the car to make decisions based upon data from the Hokuyo LiDAR and a visual camera. We need to install NVIDIA SDK (software development kit) Manager to a desktop that can be used to flash the TX2. After booting up the TX2, linux and ROS can be installed on it. ROS uses topics and nodes to link robotic components together through processes called publishing and subscribing. After installing the ROS and other pieces of software, the model cars can run along the testbed tracks that we constructed. The LiDAR system can sense and detect the obstacles for the car to avoid collision.</p>
 
 <center><video style="width:100%" controls>
-  <source src="Projects/Installing_software.mp4" type="video/mp4">
+  <source src="/Projects/Installing_software.mp4" type="video/mp4">
  </video></center>
  <div class="caption-container"> <p> It requires troubleshooting and debugging when installing the necessary software and algorithms. </p></div>
 
@@ -201,7 +201,7 @@ We hope that this design achieves both low power and fast processing. See this i
 <p style="width:98%"> (3) <b>Computer Vision</b> To give the car more intelligence, we would like the car to detect objects and lanes from its camera footage, which requires computer vision techniques. Particularly, lane detection is fundamental because lane markings are the main static component on the road that instruct the vehicles to safely drive on the road. Deep learning methods have been the new standards for lane detection, either based on semantic segmentation, or convolutional neural networks. Deep learning models are typically large, and require expensive computing power such as GPU to deploy. For a small chip like TX2, we will need efficient and portable deep learning models. We have been examining the Ultra-fast-lane-detection algorithm package that uses a ResNet-18 as a backbone in the model, and we have attempted to compress the model to calculate less model parameters for better energy efficiency. Here is the lane detection clip where we put side-by-side the car running video and the camera footage of that car while running where the Ultra-fast-lane-detection model labeled the lane markings. This model has been pretty accurate when detecting lanes from recorded videos, but for a streamlined footage like in our situation, more work may be needed to improve detection accuracy. </p>
 
 <center><video style="width:100%" controls>
-  <source src="Projects/Fast_lane_detection.mp4" type="video/mp4">
+  <source src="/Projects/Fast_lane_detection.mp4" type="video/mp4">
  </video></center>
  <div class="caption-container"> <p> On the left side, it is the video we recorded when the car ran on a short track; on the right side, it shows the footage that the car camera took when the car ran and was marked by the lane detection algorithm. </p></div>
 
@@ -210,7 +210,7 @@ We hope that this design achieves both low power and fast processing. See this i
 <p style="width:98%"> (4) <b>Conference Presentation</b> Our work has been selected by an ACM/IEEE Conference (<a href="https://www.islped.org/2022/">ACM/IEEE International Symposium on Low Power Electronics and Design</a>) for Design Contest, and I demonstrated our prototype car and lane detection among other teams of graduate students and scientists. Here is our <a href="Projects/ISLPED2022_Design_Contest.pdf"> submitted abstract</a>, and here is the <a href="Projects/IEEE_Symposium.pdf">poster</a> I presented at Boston in August 2022. </p>
 
 <center><video style="width:100%" controls>
-  <source src="Projects/ISLPED-v1.mp4" type="video/mp4">
+  <source src="/Projects/ISLPED-v1.mp4" type="video/mp4">
  </video></center>
  <div class="caption-container"> <p> A clip showing me present at the conference with a poster and also a demonstration on the floor. </p></div>
 
@@ -253,7 +253,7 @@ We hope that this design achieves both low power and fast processing. See this i
 
 <p style="width:98%">(1) <b>2019-2020:</b> I worked on a quantum physics topic related to bremsstrahlung radiation together with five other students who were one grade above me. I played important roles in the teamwork. Particularly, I communicated several ideas to the team after reading literature and contributed in programming the related algorithms.  </p>
 
-<p style="width:98%">Our proposed experiment has been written into a <a href="Projects/BL4S-2020.pdf">PDF file</a>. Our team named as "The Quantum-Plators" was one of the special mentioned teams in 2020. </p>
+<p style="width:98%">Our proposed experiment has been written into a <a href="/Projects/BL4S-2020.pdf">PDF file</a>. Our team named as "The Quantum-Plators" was one of the special mentioned teams in 2020. </p>
 
 <iframe src="https://beamlineforschools.cern/sites/default/files/BL4S_shortlisted_teams_2020.pdf" width="100%" height="600"></iframe>
 
@@ -267,7 +267,7 @@ We hope that this design achieves both low power and fast processing. See this i
 <br>
 <p style="width:98%">(3) <b>2021-2022:</b> We (the same team as in 2020-2021, and now two 12th graders, two 11th graders, and one 10th grader) proposed another experiment to measure the total number of up and anti-down bar quarks in a sulfur nucleus. Based on our literature review, although scientists have confirmed with great certainty the number of quarks in a nucleus, no study has been published to measure the number of quarks at the muon mass scale. </p>
 
-<p style="width:98%">This is a much more well-thought experiment and has been described in this <a href="Projects/BL4S-2022.pdf">PDF file</a>. Although this experiment was still not selected to be the top two, we have learned a lot from the research and we are fascinated that at different resolutions, different numbers of particles can be observed. In order to understand a physical concept, we need to examine it from so many different perspectives.  </p>
+<p style="width:98%">This is a much more well-thought experiment and has been described in this <a href="/Projects/BL4S-2022.pdf">PDF file</a>. Although this experiment was still not selected to be the top two, we have learned a lot from the research and we are fascinated that at different resolutions, different numbers of particles can be observed. In order to understand a physical concept, we need to examine it from so many different perspectives.  </p>
 
 
 <br>
