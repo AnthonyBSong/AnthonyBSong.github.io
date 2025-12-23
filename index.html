@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anthony Song</title>
+  <style>
+    /* ===== RESET & BASE ===== */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    
+    :root {
+      --text-primary: #222;
+      --text-secondary: #444;
+      --text-muted: #666;
+      --link-color: #0066cc;
+      --link-hover: #004499;
+      --bg-primary: #fff;
+      --bg-highlight: #f5f7fa;
+      --border: #e0e0e0;
+      --award-color: #cc6600;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+    a:hover { 
+      color: var(--link-hover); 
+      text-decoration: underline; 
+    }
+
+    h1, h2, h3, h4 {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      width: 90%;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 0;
+    }
+
+    /* ===== INTRO TABLE LAYOUT ===== */
+    .intro-table {
+      display: table;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .intro-photo-cell {
+      display: table-cell;
+      vertical-align: middle;
+      width: 240px;
+      padding-right: 2.5rem;
+    }
+    .intro-photo-cell img {
+      width: 220px;
+      height: auto;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+    .intro-info-cell {
+      display: table-cell;
+      vertical-align: top;
+    }
+    .intro-info-cell h1 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+    .intro-info-cell ul {
+      list-style: none;
+      margin-bottom: 0.75rem;
+      font-size: 1.05rem;
+    }
+    .intro-info-cell ul li {
+      margin: 0.3rem 0;
+      color: var(--text-secondary);
+    }
+    .intro-info-cell ul li a {
+      color: var(--link-color);
+    }
+    .intro-links {
+      margin-top: 0.75rem;
+      font-size: 1rem;
+    }
+    .intro-links a {
+      margin-right: 0.25rem;
+    }
+
+    /* ===== BIO PARAGRAPHS ===== */
+    .bio {
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+    .bio p {
+      margin-bottom: 1rem;
+    }
+
+    /* ===== RESEARCH INTERESTS HIGHLIGHT ===== */
+    .research-highlight {
+      background: var(--bg-highlight);
+      border-left: 3px solid #ccc;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      margin-top: 2rem;
+    }
+    section > h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ===== NEWS ===== */
+    .news-list {
+      list-style: disc;
+      padding-left: 1.25rem;
+      font-size: 0.95rem;
+    }
+    .news-list li {
+      margin: 0.4rem 0;
+      color: var(--text-secondary);
+    }
+    .news-list .date {
+      color: var(--text-muted);
+    }
+
+    /* ===== EDUCATION ===== */
+    .edu-item {
+      display: flex;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid #f0f0f0;
+      align-items: center;
+    }
+    .edu-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .edu-details {
+      flex: 1 1 0;
+    }
+    .edu-details h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+    .edu-details p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin: 0.1rem 0;
+    }
+    .edu-logo {
+      flex: 0 0 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .edu-logo img {
+      max-height: 60px;
+      max-width: 80px;
+      object-fit: contain;
+    }
+
+    /* ===== WORK EXPERIENCE ===== */
+    .exp-item {
+      display: flex;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid #f0f0f0;
+      align-items: center;
+    }
+    .exp-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .exp-details {
+      flex: 1 1 0;
+    }
+    .exp-details h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+    .exp-details p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin: 0.1rem 0;
+    }
+    .exp-details .date {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+    .exp-logo {
+      flex: 0 0 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .exp-logo img {
+      max-height: 60px;
+      max-width: 80px;
+      object-fit: contain;
+    }
+    .exp-logo img[src*="zhang.jpeg"] { max-height: 65px; }
+    .exp-logo img[src*="emprise.png"] { max-height: 65px; }
+    .exp-logo img[src*="Interaction.png"] { max-height: 60px; }
+
+    /* ===== PUBLICATIONS ===== */
+    .pub-item {
+      display: flex;
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #f0f0f0;
+      align-items: flex-start;
+    }
+    .pub-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .pub-thumb {
+      flex: 0 0 150px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .pub-thumb img {
+      width: 150px;
+      height: 135px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+    }
+    .pub-details {
+      flex: 1 1 0;
+    }
+    .pub-details h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      line-height: 1.4;
+    }
+    .pub-details h3 a {
+      color: var(--link-color);
+    }
+    .pub-details .authors {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.2rem;
+    }
+    .pub-details .venue {
+      font-size: 0.92rem;
+      font-style: italic;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+    .pub-details .award {
+      color: var(--award-color);
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-bottom: 0.25rem;
+    }
+    .pub-details .links {
+      font-size: 0.9rem;
+    }
+    .pub-details .links a {
+      margin-right: 0.35rem;
+      cursor: pointer;
+    }
+    .pub-details .links a.abs-toggle {
+      user-select: none;
+    }
+    .pub-details .abstract {
+      display: none;
+      margin-top: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: #f8f9fa;
+      border-left: 3px solid var(--link-color);
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .pub-details .abstract.show {
+      display: block;
+    }
+    .pub-details .summary {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin-top: 0.35rem;
+      line-height: 1.6;
+    }
+
+    /* ===== PROJECTS ===== */
+    .project-item {
+      display: flex;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .project-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .project-thumb {
+      flex: 0 0 120px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .project-thumb img,
+    .project-thumb video {
+      width: 120px;
+      height: 80px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+    }
+    .project-thumb img[src*="lightlogo.png"],
+    .project-thumb img[src*="superscalar.png"] {
+      object-fit: contain;
+      padding: 4px;
+    }
+    .project-thumb video {
+      background: #000;
+      overflow: hidden;
+    }
+    .project-thumb video::-webkit-media-controls {
+      display: none !important;
+    }
+    .project-thumb video::-webkit-media-controls-enclosure {
+      display: none !important;
+    }
+    .project-details {
+      flex: 1 1 0;
+    }
+    .project-details h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+    .project-details p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.2rem;
+    }
+    .project-details .links {
+      font-size: 0.9rem;
+    }
+    .project-details .links a {
+      margin-right: 0.35rem;
+      cursor: pointer;
+    }
+    .project-details .links a.intro-toggle,
+    .project-details .links a.abs-toggle {
+      user-select: none;
+    }
+    .project-details .keywords {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .project-details .keyword {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      font-weight: 500;
+      display: inline-block;
+    }
+    .keyword.compiler {
+      background-color: #e3f2fd;
+      color: #1565c0;
+    }
+    .keyword.arch {
+      background-color: #fff3e0;
+      color: #e65100;
+    }
+    .keyword.robotics {
+      background-color: #f3e5f5;
+      color: #6a1b9a;
+    }
+    .keyword.vision {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+    .keyword.embedded {
+      background-color: #fff9c4;
+      color: #827717;
+    }
+    .project-details .intro,
+    .project-details .abstract {
+      display: none;
+      margin-top: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: #f8f9fa;
+      border-left: 3px solid var(--link-color);
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .project-details .intro.show,
+    .project-details .abstract.show {
+      display: block;
+    }
+
+    /* ===== TEACHING ===== */
+    .teaching-list {
+      list-style: disc;
+      padding-left: 1.25rem;
+      font-size: 0.95rem;
+    }
+    .teaching-list li {
+      margin: 0.35rem 0;
+      color: var(--text-secondary);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .intro-table, .intro-photo-cell, .intro-info-cell {
+        display: block;
+        width: 100%;
+      }
+      .intro-photo-cell {
+        padding-right: 0;
+        margin-bottom: 1rem;
+      }
+      .edu-item, .exp-item, .pub-item, .project-item {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .edu-logo, .exp-logo, .pub-thumb, .project-thumb {
+        justify-content: flex-start;
+      }
+      .pub-thumb img, .project-thumb img, .project-thumb video {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+
+    <!-- ===== INTRO ===== -->
+    <div class="intro-table">
+      <div class="intro-photo-cell">
+        <img id="profile-photo" src="resources/images/personal/anthony1.png" alt="Anthony Song">
+      </div>
+      <div class="intro-info-cell">
+        <h1>Anthony Song</h1>
+        <ul>
+          <li>Undergraduate Student</li>
+          <li><a href="https://www.cs.cornell.edu/" target="_blank">Department of CS</a>, <a href="https://www.ece.cornell.edu/" target="_blank">Department of ECE</a></li>
+          <li><a href="https://www.engineering.cornell.edu/" target="_blank">College of Engineering</a></li>
+          <li><a href="https://www.cornell.edu/" target="_blank">Cornell University</a></li>
+        </ul>
+        <ul>
+          <li>✉ Email: abs343 [at] cornell [dot] edu</li>
+        </ul>
+        <div class="intro-links">
+          <a href="https://github.com/AnthonyBSong" target="_blank">🐙 GitHub</a> / 
+          <a href="https://scholar.google.com/citations?user=WVcHhbMAAAAJ&hl=en" target="_blank">🎓 Google Scholar</a> / 
+          <a href="https://www.linkedin.com/in/anthonybsong7851/" target="_blank">💼 LinkedIn</a> / 
+          <a href="blog.html">📝 Blog</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== BIO ===== -->
+    <div class="bio">
+      <p>
+        I am an undergraduate student at <a href="https://www.cornell.edu/" target="_blank">Cornell University</a>, pursuing dual degrees in Electrical Engineering and Computer Science. I have interned at AMD, contributing to verification / diagnostics tools for AI Engine Compilers. Outside of academics, I am big fan of basketball, sketching, origami, photography, and cooking. I am also a big foodie so feel free to reach out to me if you have any recommendations!
+      </p>
+      <p>
+        I am fortunate to be advised by Prof. <a href="https://www.csl.cornell.edu/~zhiruz/" target="_blank">Zhiru Zhang</a> in the <a href="https://www.csl.cornell.edu/" target="_blank">Computer Systems Laboratory</a>. Previously, I worked with Prof. <a href="https://www.cs.cornell.edu/~tapo/" target="_blank">Tapomayukh Bhattacharjee</a> at <a href="https://emprise.cs.cornell.edu/" target="_blank">EmPRISE Lab</a> and Prof. <a href="https://robotics.usc.edu/~maja/" target="_blank">Maja Matarić</a> at the <a href="https://uscinteractionlab.web.app/" target="_blank">Interaction Lab</a>.
+      </p>
+    </div>
+
+    <!-- ===== RESEARCH INTERESTS ===== -->
+    <div class="research-highlight">
+      My research focuses on building <strong>compilers</strong>, <strong>system design</strong>, <strong>computer architecture</strong>, and <strong>hardware accelerators</strong> for efficient computation. I am particularly interested in <strong>system co-design</strong> and <strong>robotics</strong>—designing domain-specific languages and tools that enable programmers to harness heterogeneous hardware more productively through coordinated operating system and computer architecture design.
+    </div>
+
+    <!-- ===== NEWS ===== -->
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news-list">
+        <li><span class="date">[06/25]</span> <a href="https://emprise.cs.cornell.edu/feast/" target="_blank">FEAST</a> won the RSS 2025 Outstanding Paper Award and is a finalist for the Outstanding Systems Paper Award!</li>
+        <li><span class="date">[04/25]</span> Our robotics systems paper <a href="https://emprise.cs.cornell.edu/feast/" target="_blank">FEAST</a> has been accepted to RSS 2025.</li>
+      </ul>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section id="education">
+      <h2>Education</h2>
+      
+      <div class="edu-item">
+        <div class="edu-details">
+          <h4>Cornell University</h4>
+          <p>B.S. in Electrical Engineering & Computer Science</p>
+          <p><em>Aug 2023 – May 2027</em></p>
+        </div>
+        <div class="edu-logo">
+          <img src="resources/images/logos/cornell.png" alt="Cornell University">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WORK EXPERIENCE ===== -->
+    <section id="work">
+      <h2>Work Experience</h2>
+
+      <div class="exp-item">
+        <div class="exp-details">
+          <h4>Zhang Research Group — Cornell University</h4>
+          <p>Research Assistant</p>
+          <p>Hardware Accelerators for Linear Transformations</p>
+          <p>Advisor: Zhiru Zhang</p>
+          <p class="date">Aug 2024 – Present</p>
+        </div>
+        <div class="exp-logo"><img src="resources/images/logos/zhang.jpeg" alt="Zhang Lab"></div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-details">
+          <h4>Advanced Micro Devices</h4>
+          <p>AI Software Engineer Intern</p>
+          <p>Automated Diagnostics Tools for AI Engine Compilers</p>
+          <p>Mentors: Keshav Gurushankar, Bin Tu</p>
+          <p class="date">May 2025 – Aug 2025</p>
+        </div>
+        <div class="exp-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/AMD_Logo.svg/512px-AMD_Logo.svg.png" alt="AMD"></div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-details">
+          <h4>EmPRISE Lab — Cornell University</h4>
+          <p>Research Assistant</p>
+          <p>Robot Systems Design for Assisted Feeding</p>
+          <p>Advisor: Tapomayukh Bhattacharjee</p>
+          <p class="date">Dec 2023 – May 2025</p>
+        </div>
+        <div class="exp-logo"><img src="resources/images/logos/emprise.png" alt="EmPRISE Lab"></div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-details">
+          <h4>Interaction Lab — University of Southern California</h4>
+          <p>Research Intern</p>
+          <p>Visual Simultaneous Localization and Mapping</p>
+          <p>Advisor: Maja Matarić</p>
+          <p class="date">May 2024 – Aug 2024</p>
+        </div>
+        <div class="exp-logo"><img src="resources/images/logos/Interaction.png" alt="Interaction Lab"></div>
+      </div>
+    </section>
+
+    <!-- ===== PUBLICATIONS ===== -->
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <div class="pub-item">
+        <div class="pub-thumb">
+          <img src="resources/images/work/FEAST.png" alt="FEAST thumbnail">
+        </div>
+        <div class="pub-details">
+          <h3><a href="https://emprise.cs.cornell.edu/feast/" target="_blank">FEAST: A Flexible Mealtime-Assistance System Towards In-the-Wild Personalization</a></h3>
+          <p class="authors">Rajat Kumar Jenamani, Tom Silver, Ben Dodson, Shiqin Tong, <strong>Anthony Song</strong>, Yuting Yang, Ziang Liu, Benjamin Howe, Aimee Whitneck, Tapomayukh Bhattacharjee</p>
+          <p class="venue">RSS, 2025</p>
+          <p class="award">(Best Paper Award, Best Systems Paper Finalist)</p>
+          <p class="links">
+            <a href="#" class="abs-toggle" onclick="toggleAbstract(this); return false;">[abs]</a>
+            <a href="https://emprise.cs.cornell.edu/feast/" target="_blank">[project]</a>
+            <a href="https://arxiv.org/abs/2506.14968" target="_blank">[paper]</a>
+            <a href="https://github.com/empriselab/feeding-deployment" target="_blank">[code]</a>
+          </p>
+          <div class="abstract">
+            Mealtime assistance is a critical activity of daily living (ADL) for individuals with motor impairments. Existing robotic systems typically require extensive customization and fine-tuning for each user, limiting their real-world deployment. We present FEAST, a flexible mealtime-assistance system that enables care recipients to personalize their feeding experience in-the-wild with minimal researcher intervention. FEAST incorporates adaptive learning mechanisms that allow the system to learn from user preferences and feedback across diverse in-home scenarios. Our system demonstrates significant improvements in user satisfaction and eating independence compared to traditional approaches, enabling more widespread adoption of assistive feeding technology.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project-item">
+        <div class="project-thumb">
+          <img src="resources/images/work/lightlogo.png" alt="NanoForge">
+        </div>
+        <div class="project-details">
+          <h4>NanoForge</h4>
+          <p>Coming Soon...</p>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-thumb">
+          <img src="resources/images/work/abax_logo.png" alt="ABAX">
+        </div>
+        <div class="project-details">
+          <h4>ABAX: ASIC Backend for Allo in XLS</h4>
+          <p>Allo-to-XLS Compiler Backend to Support ASIC Flow</p>
+          <div class="keywords">
+            <span class="keyword compiler">HLS</span>
+            <span class="keyword compiler">Compilers</span>
+            <span class="keyword compiler">MLIR</span>
+            <span class="keyword compiler">LLVM</span>
+            <span class="keyword arch">ASIC</span>
+            <span class="keyword arch">FPGA</span>
+          </div>
+          <p class="links">
+            <a href="#" class="abs-toggle" onclick="toggleAbstract(this); return false;">[abs]</a>
+            <a href="resources/files/abax_report.pdf" target="_blank">[report]</a>
+            <a href="https://github.com/cornell-zhang/allo" target="_blank">[code]</a>
+            <a href="https://www.youtube.com/watch?v=quFFSATK9I4" target="_blank">[video]</a>
+          </p>
+          <div class="abstract">
+            With the end of Dennard scaling, there has been a significant increase in the development of special-purpose hardware accelerators designed to meet the ever-growing demand for compute. While these accelerators - typically implemented on Field Programmable Gate Arrays (FPGAs) and Application-Specific Integrated Circuits (ASICs) - offer superior performance and energy efficiency, their design process is arduous and complex. High-Level Synthesis (HLS) frameworks aim to mitigate this challenge by automating the translation of algorithmic descriptions into hardware, thereby significantly reducing the barrier to entry for hardware engineers. Allo is one such composable HLS framework specifically targeting spatial accelerator design, allowing designs defined in Python to be lowered to FPGA RTL. In this work, we introduce ABAX, an extension for Allo that expands its backend support to target Google's Accelerated HW Synthesis (XLS) toolchain. ABAX acts as a bridge, transpiling Allo designs to XLS's two frontends: DSLX and XLS [CC]. To validate this flow, we implement five representative kernels-scalar add, vector-vector add (vvadd), matrix-vector multiplication (GEMV), matrix multiplication (GEMM), and systolic arrays-and successfully lower them to ASIC RTL. This work demonstrates Allo's novel capability to target ASIC flows, unifying the composable programming model across both FPGA and ASIC targets.
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-thumb">
+          <img src="resources/images/work/superscalar.png" alt="Superscalar Processor">
+        </div>
+        <div class="project-details">
+          <h4>Superscalar Processor</h4>
+          <p>A Quad-Issue Superscalar, 5-Stage Pipelined Processor in SystemVerilog</p>
+          <div class="keywords">
+            <span class="keyword arch">Computer Architecture</span>
+            <span class="keyword arch">Out-of-Order Execution</span>
+            <span class="keyword arch">Multi-Core</span>
+          </div>
+          <p class="links">
+            <a href="#" class="intro-toggle" onclick="toggleAbstract(this); return false;">[intro]</a>
+            <a href="resources/files/superscalar_report.pdf" target="_blank">[report]</a>
+          </p>
+          <div class="intro">
+            In Lab 4, we investigate and evaluate two designs: a single-core system and a multi-core system with private instruction caches and shared data caches connected via a ring network. We also investigate and evaluate software (algorithm) design for both hardware systems. Our baseline is a single 5-stage pipelined processor connected with instruction and data caches and a corresponding single-threaded sorting algorithm. The alternative design instead instantiates 4 pipelined processors, utilizing private instruction caches and a <em>banked data cache</em> system via a ring network with a corresponding multi-threaded sorting algorithm. This assignment connects deeply with a fundamental theme in computer architecture: the multi-core era. Per the end of <em>Dennard Scaling</em> around 2005 (fundamental limitations of single-core processors), computer architects looked to <em>exploiting parallelism</em> to improve performance. In this lab, we aim to quantify both the benefits and drawbacks of such multi-core designs.
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-thumb">
+          <img src="resources/images/work/blossom_nav.gif" alt="BlossomNav">
+        </div>
+        <div class="project-details">
+          <h4>BlossomNav</h4>
+          <p>Visual Odometry Algorithm + Software System for Mobile Socially Assistive Robots</p>
+          <div class="keywords">
+            <span class="keyword embedded">Embedded OS</span>
+            <span class="keyword robotics">SLAM</span>
+            <span class="keyword robotics">Visual Odometry</span>
+            <span class="keyword robotics">Robotics</span>
+          </div>
+          <p class="links">
+            <a href="https://interaction-lab.github.io/BlossomNav/" target="_blank">[project]</a>
+            <a href="https://github.com/interaction-lab/BlossomNav" target="_blank">[code]</a>
+            <a href="resources/files/BlossomNav_Poster.pdf" target="_blank">[poster]</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-thumb">
+          <video width="120" height="80" autoplay muted loop playsinline>
+            <source src="resources/videos/Fast_lane_detection.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="project-details">
+          <h4>Efficient Lane Detector for Autonomous Model Cars</h4>
+          <p>ISLPED 2022 Design Contest Submission — Pruned ResNet18 Lane Detector + Model Autonomous Car</p>
+          <div class="keywords">
+            <span class="keyword vision">Computer Vision</span>
+            <span class="keyword vision">Neural Netw orks</span>
+            <span class="keyword embedded">Embedded Systems</span>
+            <span class="keyword arch">FPGA</span>
+          </div>
+          <p class="links">
+            <a href="#" class="abs-toggle" onclick="toggleAbstract(this); return false;">[abs]</a>
+            <a href="resources/files/ISLPED2022_Design_Contest.pdf" target="_blank">[report]</a>
+            <a href="resources/files/IEEE_Symposium.pdf" target="_blank">[poster]</a>
+          </p>
+          <div class="abstract">
+            In recent years, autonomous driving has attracted significant attention. There are many technical challenges in creating such automation, such as quick recognition of objects in the environment. A lane-detection system is a crucial component of connected and autonomous vehicles. Although deep learning models have been the state-of-the-art for lane detection from camera footage collected by vehicle sensors, these models require extensive computation and memory storage to detect and track lanes, which restricts their applicability. We apply a model compression technique to prune weights for a well-trained ResNet18 lane detector. The compressed model can run on a power-efficient TX2 or FPGA equipping an F1Tenth model car. We will demonstrate this system using our assembled model car and report detection accuracy and efficiency using benchmark datasets.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEACHING ===== -->
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <ul class="teaching-list">
+        <li><strong>ECE 5760: Hardware Acceleration via FPGA</strong>, TA, Spring 2026</li>
+        <li><strong>ECE 2300: Digital Logic and Computer Organization</strong>, TA, Fall 2025</li>
+        <li><strong>ECE 2300: Digital Logic and Computer Organization</strong>, TA, Spring 2025</li>
+        <li><strong>CS 2800: Discrete Structures</strong>, TA, Fall 2024</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    © 2025 Anthony Song · Last updated December 2025
+  </footer>
+
+  <script>
+    // Randomly select a profile photo on page load
+    (function() {
+      const photos = [
+        'resources/images/personal/anthony1.png',
+        'resources/images/personal/anthony2.png',
+        'resources/images/personal/anthon3.png'
+      ];
+      const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
+      const photoImg = document.getElementById('profile-photo');
+      if (photoImg) {
+        photoImg.src = randomPhoto;
+      }
+    })();
+
+    function toggleAbstract(link) {
+      const item = link.closest('.pub-item') || link.closest('.project-item');
+      if (!item) return;
+      
+      const abstract = item.querySelector('.abstract') || item.querySelector('.intro');
+      if (abstract) {
+        abstract.classList.toggle('show');
+        // Update link text
+        const isShowing = abstract.classList.contains('show');
+        if (isShowing) {
+          link.textContent = '[hide]';
+        } else {
+          // Restore original text based on class
+          if (link.classList.contains('intro-toggle')) {
+            link.textContent = '[intro]';
+          } else if (link.classList.contains('abs-toggle')) {
+            link.textContent = '[abs]';
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>
