@@ -344,8 +344,7 @@
       border-radius: 3px;
       border: 1px solid var(--border);
     }
-    .project-thumb img[src*="lightlogo.png"],
-    .project-thumb img[src*="superscalar.png"] {
+    .project-thumb img[src*="lightlogo.png"] {
       object-fit: contain;
       padding: 4px;
     }
@@ -630,7 +629,21 @@
         </div>
         <div class="project-details">
           <h4>VeriLens</h4>
-          <p>Coming Soon...</p>
+          <p>Interactive RTL Schematic Viewer for Verilog and SystemVerilog Projects</p>
+          <div class="keywords">
+            <span class="keyword arch">RTL</span>
+            <span class="keyword arch">SystemVerilog</span>
+            <span class="keyword compiler">Parsers</span>
+            <span class="keyword compiler">C++</span>
+          </div>
+          <p class="links">
+            <a href="#" class="abs-toggle" onclick="toggleAbstract(this); return false;">[abs]</a>
+            <a href="https://anthonybsong.github.io/VeriLens/" target="_blank">[project]</a>
+            <a href="https://github.com/AnthonyBSong/VeriLens" target="_blank">[code]</a>
+          </p>
+          <div class="abstract">
+            VeriLens turns Verilog and SystemVerilog projects into zoomable, hierarchical schematics. A C++ lexer and parser analyzes the full project (including gate primitives and generate regions) to extract module hierarchy and connectivity, which is emitted as a JSON structural model and rendered in a self-contained HTML viewer. Modules can be expanded in place, signals traced across module boundaries, and layout controlled through a YAML configuration file.
+          </div>
         </div>
       </div>
 
@@ -661,27 +674,6 @@
         </div>
       </div>
 
-      <div class="project-item">
-        <div class="project-thumb">
-          <img src="resources/images/work/superscalar.png" alt="Multicore Processor">
-        </div>
-        <div class="project-details">
-          <h4>Multicore Processor</h4>
-          <p>A Quad-Issue 5-Stage Pipelined Processor in SystemVerilog</p>
-          <div class="keywords">
-            <span class="keyword arch">Computer Architecture</span>
-            <span class="keyword arch">Out-of-Order Execution</span>
-            <span class="keyword arch">Multi-Core</span>
-          </div>
-          <p class="links">
-            <a href="#" class="intro-toggle" onclick="toggleAbstract(this); return false;">[intro]</a>
-            <a href="resources/files/superscalar_report.pdf" target="_blank">[report]</a>
-          </p>
-          <div class="intro">
-            In Lab 4, we investigate and evaluate two designs: a single-core system and a multi-core system with private instruction caches and shared data caches connected via a ring network. We also investigate and evaluate software (algorithm) design for both hardware systems. Our baseline is a single 5-stage pipelined processor connected with instruction and data caches and a corresponding single-threaded sorting algorithm. The alternative design instead instantiates 4 pipelined processors, utilizing private instruction caches and a <em>banked data cache</em> system via a ring network with a corresponding multi-threaded sorting algorithm. This assignment connects deeply with a fundamental theme in computer architecture: the multi-core era. Per the end of <em>Dennard Scaling</em> around 2005 (fundamental limitations of single-core processors), computer architects looked to <em>exploiting parallelism</em> to improve performance. In this lab, we aim to quantify both the benefits and drawbacks of such multi-core designs.
-          </div>
-        </div>
-      </div>
 
       <div class="project-item">
         <div class="project-thumb">
