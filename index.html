@@ -633,17 +633,12 @@
           <div class="keywords">
             <span class="keyword arch">RTL</span>
             <span class="keyword arch">SystemVerilog</span>
-            <span class="keyword compiler">Parsers</span>
-            <span class="keyword compiler">C++</span>
+            <span class="keyword compiler">Visualizer</span>
           </div>
           <p class="links">
-            <a href="#" class="abs-toggle" onclick="toggleAbstract(this); return false;">[abs]</a>
             <a href="https://anthonybsong.github.io/VeriLens/" target="_blank">[project]</a>
             <a href="https://github.com/AnthonyBSong/VeriLens" target="_blank">[code]</a>
           </p>
-          <div class="abstract">
-            VeriLens turns Verilog and SystemVerilog projects into zoomable, hierarchical schematics. A C++ lexer and parser analyzes the full project (including gate primitives and generate regions) to extract module hierarchy and connectivity, which is emitted as a JSON structural model and rendered in a self-contained HTML viewer. Modules can be expanded in place, signals traced across module boundaries, and layout controlled through a YAML configuration file.
-          </div>
         </div>
       </div>
 
@@ -660,17 +655,12 @@
             <span class="keyword compiler">MLIR</span>
             <span class="keyword compiler">LLVM</span>
             <span class="keyword arch">ASIC</span>
-            <span class="keyword arch">FPGA</span>
           </div>
           <p class="links">
-            <a href="#" class="abs-toggle" onclick="toggleAbstract(this); return false;">[abs]</a>
             <a href="resources/files/abax_report.pdf" target="_blank">[report]</a>
             <a href="https://github.com/cornell-zhang/allo" target="_blank">[code]</a>
             <a href="https://www.youtube.com/watch?v=quFFSATK9I4" target="_blank">[video]</a>
           </p>
-          <div class="abstract">
-            With the end of Dennard scaling, there has been a significant increase in the development of special-purpose hardware accelerators designed to meet the ever-growing demand for compute. While these accelerators - typically implemented on Field Programmable Gate Arrays (FPGAs) and Application-Specific Integrated Circuits (ASICs) - offer superior performance and energy efficiency, their design process is arduous and complex. High-Level Synthesis (HLS) frameworks aim to mitigate this challenge by automating the translation of algorithmic descriptions into hardware, thereby significantly reducing the barrier to entry for hardware engineers. Allo is one such composable HLS framework specifically targeting spatial accelerator design, allowing designs defined in Python to be lowered to FPGA RTL. In this work, we introduce ABAX, an extension for Allo that expands its backend support to target Google's Accelerated HW Synthesis (XLS) toolchain. ABAX acts as a bridge, transpiling Allo designs to XLS's two frontends: DSLX and XLS [CC]. To validate this flow, we implement five representative kernels-scalar add, vector-vector add (vvadd), matrix-vector multiplication (GEMV), matrix multiplication (GEMM), and systolic arrays-and successfully lower them to ASIC RTL. This work demonstrates Allo's novel capability to target ASIC flows, unifying the composable programming model across both FPGA and ASIC targets.
-          </div>
         </div>
       </div>
 
@@ -713,13 +703,9 @@
             <span class="keyword arch">FPGA</span>
           </div>
           <p class="links">
-            <a href="#" class="abs-toggle" onclick="toggleAbstract(this); return false;">[abs]</a>
             <a href="resources/files/ISLPED2022_Design_Contest.pdf" target="_blank">[report]</a>
             <a href="resources/files/IEEE_Symposium.pdf" target="_blank">[poster]</a>
           </p>
-          <div class="abstract">
-            In recent years, autonomous driving has attracted significant attention. There are many technical challenges in creating such automation, such as quick recognition of objects in the environment. A lane-detection system is a crucial component of connected and autonomous vehicles. Although deep learning models have been the state-of-the-art for lane detection from camera footage collected by vehicle sensors, these models require extensive computation and memory storage to detect and track lanes, which restricts their applicability. We apply a model compression technique to prune weights for a well-trained ResNet18 lane detector. The compressed model can run on a power-efficient TX2 or FPGA equipping an F1Tenth model car. We will demonstrate this system using our assembled model car and report detection accuracy and efficiency using benchmark datasets.
-          </div>
         </div>
       </div>
     </section>
@@ -739,7 +725,7 @@
   </main>
 
   <footer class="container">
-    © 2025 Anthony Song · Last updated May 2026
+    © 2026 Anthony Song · Last updated October 2026
   </footer>
 
   <script>
